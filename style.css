@@ -18,6 +18,7 @@
     border: 1px solid grey;
     border-radius: 3px;
     padding: 10px;
+    margin-top: 20px;
     align-items: center;
 }
 .block-todo .block-todo__todo-form .todo__input {
@@ -32,9 +33,11 @@
 .block-todo .block-todo__todo-form .todo__submit {
     width: 50px;
     height: 40px;
-    background-color: #00d669;
+    background-color: #29988e;
     border: none;
     color: #ffffff;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 /* ------------------ */
 

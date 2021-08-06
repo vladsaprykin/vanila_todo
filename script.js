@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     radioBtnInputs.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (e.target.hasAttribute('checked')) return
             clearChecked();
             e.target.classList.add('checked');
             e.target.checked = true;
@@ -12,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
     const clearChecked = () => {
         radioBtnInputs.forEach( (btn) => {
-            btn.classList.remove('checked')
-            btn.checked = false
+            btn.classList.remove('checked');
+            btn.checked = false;
         })
     }
     const colorTodoHandler = (colorStr) => {
@@ -43,21 +42,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
         radioBtnInputs[randColor].classList.add('checked');
     }
     const checkTodos = () => {
-        const todos = [...document.getElementsByClassName('todo-item')]
+        const todos = [...document.getElementsByClassName('todo-item')];
 
         if (!todos.length) return
         todos.forEach(item => {
             const completedItem = item.getAttribute('completed');
-            const colorItem = item.getAttribute('color')
+            const colorItem = item.getAttribute('color');
 
             switch (completedItem){
                 case 'true':
-                    item.style.background = '#ccc'
-                    item.querySelector('.todo-item__text').style.textDecoration = 'line-through'
+                    item.style.background = '#ccc';
+                    item.querySelector('.todo-item__text').style.textDecoration = 'line-through';
                     break;
                 case 'false':
-                    item.style.background = colorItem
-                    item.querySelector('.todo-item__text').style.textDecoration = 'none'
+                    item.style.background = colorItem;
+                    item.querySelector('.todo-item__text').style.textDecoration = 'none';
                     break;
             }
         })
@@ -69,31 +68,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
         const textTodo = document.createElement("div");
         const todoItems = document.querySelector('#todoItems');
 
-
-        const divTodoColor = colorTodoHandler(data.todoColor)
+        const divTodoColor = colorTodoHandler(data.todoColor);
 
         divTodo.style.background = divTodoColor;
         divTodo.className = "todo-item";
         divTodo.setAttribute('completed','false');
-        divTodo.setAttribute('color',divTodoColor)
+        divTodo.setAttribute('color',divTodoColor);
 
-        textTodo.innerText = data.text
-        textTodo.className = 'todo-item__text'
-        textTodo.style.color = '#ffffff'
+        textTodo.innerText = data.text;
+        textTodo.className = 'todo-item__text';
+        textTodo.style.color = '#ffffff';
 
-        divCheckBox.className = 'todo-item__check-box'
+        divCheckBox.className = 'todo-item__check-box';
         checkBoxTodo.type = 'checkbox';
 
-        divCheckBox.append(checkBoxTodo)
+        divCheckBox.append(checkBoxTodo);
         divTodo.append(divCheckBox);
         divTodo.append(textTodo);
-        todoItems.append(divTodo)
+        todoItems.append(divTodo);
 
         getRandColor();
 
         checkBoxTodo.addEventListener('change', (e) => {
-            const completedItem = e.target.closest('.todo-item').getAttribute('completed') === 'false' ? 'true' : 'false'
-            e.target.closest('.todo-item').setAttribute('completed', completedItem)
+            const completedItem = e.target.closest('.todo-item').getAttribute('completed') === 'false' ? 'true' : 'false';
+            e.target.closest('.todo-item').setAttribute('completed', completedItem);
             checkTodos()
         })
     }
@@ -101,8 +99,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(todoForm).entries());
         if (!data.text.length) return
+        document.querySelector('.todo__input').value = '';
         createHandler(data);
-
     })
 });
-
