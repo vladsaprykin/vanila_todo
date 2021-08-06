@@ -1,0 +1,53 @@
+<html lang="html">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla ToDo</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="_container">
+        <section class="block-todo">
+            <div id='todoItems' class="block-todo__todo-items">
+                <p>Todos</p>
+            </div>
+            <form id='todoForm' class="block-todo__todo-form" action="#">
+                <input type="text" name="text" minlength="3" required class="todo__input" placeholder="Введите текст">
+                <div class="todo-form__choose-color">
+                    <div class="radio">
+                        <input class="custom-radio checked" type="radio" id="todoColor1" checked name="todoColor"
+                               value="todoColor1">
+                        <label for="todoColor1"></label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="todoColor2" name="todoColor" value="todoColor2">
+                        <label for="todoColor2"></label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="todoColor3" name="todoColor" value="todoColor3">
+                        <label for="todoColor3"></label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="todoColor4" name="todoColor" value="todoColor4">
+                        <label for="todoColor4"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="todoColor5" name="todoColor" value="todoColor5">
+                        <label for="todoColor5"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="todoColor6" name="todoColor" value="todoColor6">
+                        <label for="todoColor6"></label>
+                    </div>
+                </div>
+                <input class="todo__submit" value="Add" type="submit">
+            </form>
+        </section>
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.block-todo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* style for todo form */
+.block-todo .block-todo__todo-form {
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 10px;
+    align-items: center;
+}
+.block-todo .block-todo__todo-form .todo__input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding-right: 5px;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color {
+    display: flex;
+}
+.block-todo .block-todo__todo-form .todo__submit {
+    width: 50px;
+    height: 40px;
+    background-color: #00d669;
+    border: none;
+    color: #ffffff;
+}
+/* ------------------ */
+
+/* style for custom radio btn */
+.block-todo .block-todo__todo-form .todo-form__choose-color .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.block-todo .block-todo__todo-form .todo-form__choose-color .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    margin-right: 3px;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor1+label::before {
+    background-color: blue;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor2+label::before {
+    background-color: #ffa400;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor3+label::before {
+    background-color: green;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor4+label::before {
+    background-color: red;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor5+label::before {
+    background-color: #00d669;
+}
+.block-todo .block-todo__todo-form .todo-form__choose-color #todoColor6+label::before {
+    background-color: #530cff;
+}
+
+.block-todo .block-todo__todo-form .todo-form__choose-color .custom-radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.block-todo .block-todo__todo-form .todo-form__choose-color .checked:checked+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+}
+/* ------------------ */
+
+/* style for todo item */
+.block-todo .block-todo__todo-items {
+    width: 400px;
+}
+
+.block-todo .block-todo__todo-items .todo-item {
+    margin-bottom: 3px;
+}
+
+.block-todo .block-todo__todo-items .todo-item span {
+    padding-left: 10px;
+}
+
+.block-todo .block-todo__todo-items .todo-item {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.block-todo .block-todo__todo-items .todo-item__check-box {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-todo .block-todo__todo-items .todo-item__text {
+    border-left: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+/* ------------------ */
