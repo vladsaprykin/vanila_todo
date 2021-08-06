@@ -105,7 +105,7 @@
 .block-todo .block-todo__todo-items .todo-item {
     display: flex;
     flex-direction: row;
-    height: 40px;
+    min-height: 40px;
 }
 
 .block-todo .block-todo__todo-items .todo-item__check-box {
@@ -113,6 +113,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .block-todo .block-todo__todo-items .todo-item__text {
@@ -120,5 +121,6 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
+    word-break: break-all;
 }
 /* ------------------ */
