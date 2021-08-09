@@ -14,7 +14,7 @@
 .block-todo .block-todo__todo-form {
     display: flex;
     flex-direction: row;
-    width: 380px;
+    width: 400px;
     border: 1px solid grey;
     border-radius: 3px;
     padding: 5px 10px;
@@ -32,17 +32,20 @@
     display: flex;
 }
 .block-todo .block-todo__todo-form .todo__submit {
-    width: 50px;
-    height: 40px;
+    width: 55px;
+    height: 35px;
     background-color: #29988e;
     border: none;
     color: #ffffff;
-    margin-left: 10px;
+    margin-left: 20px;
     border-radius: 5px;
 }
 /* ------------------ */
 
 /* style for custom radio btn */
+.block-todo__todo-form .todo-form__choose-color .radio {
+    margin-right: 2px;
+}
 .block-todo .block-todo__todo-form .todo-form__choose-color .custom-radio {
     position: absolute;
     z-index: -1;
@@ -91,7 +94,7 @@
 
 /* style for todo item */
 .block-todo .block-todo__todo-items {
-    width: 400px;
+    width: 420px;
 }
 
 .block-todo .block-todo__todo-items .todo-item {
@@ -105,11 +108,11 @@
 .block-todo .block-todo__todo-items .todo-item {
     display: flex;
     flex-direction: row;
-    min-height: 40px;
+    min-height: 50px;
 }
 
 .block-todo .block-todo__todo-items .todo-item__check-box {
-    width: 40px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
